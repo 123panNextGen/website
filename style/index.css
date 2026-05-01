@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", "PingFang SC", sans-serif;
+    background: #070b14;
+    color: #ffffff;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.bg-grid {
+    position: fixed;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: -2;
+}
+
+.navbar {
+    width: 100%;
+    padding: 24px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    backdrop-filter: blur(14px);
+    background: rgba(7, 11, 20, 0.65);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 32px;
+}
+
+.navbar nav a {
+    font-size: 15px;
+    opacity: 0.85;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    opacity: 1;
+    color: #4da3ff;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 760px;
+    z-index: 2;
+}
+
+.tag {
+    color: #4da3ff;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 72px;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    font-weight: 800;
+}
+
+.desc {
+    font-size: 18px;
+    color: rgba(255,255,255,0.75);
+    max-width: 680px;
+    margin-bottom: 36px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 18px;
+}
+
+.btn {
+    padding: 14px 28px;
+    border-radius: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.primary {
+    background: linear-gradient(135deg, #4da3ff, #2563eb);
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.25);
+}
+
+.primary:hover {
+    transform: translateY(-2px);
+}
+
+.secondary {
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.03);
+}
+
+.secondary:hover {
+    border-color: #4da3ff;
+}
+
+.hero-glow {
+    position: absolute;
+    right: 10%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(77,163,255,0.25), transparent 70%);
+    filter: blur(40px);
+    z-index: 1;
+}
+
+.section {
+    padding: 120px 8%;
+}
+
+.section h2 {
+    font-size: 42px;
+    margin-bottom: 24px;
+}
+
+.section-text {
+    max-width: 800px;
+    color: rgba(255,255,255,0.75);
+    font-size: 18px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+    margin-top: 40px;
+}
+
+.card {
+    padding: 32px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(77,163,255,0.4);
+}
+
+.card h3 {
+    margin-bottom: 14px;
+    font-size: 24px;
+}
+
+.card p {
+    color: rgba(255,255,255,0.72);
+}
+
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+    margin-top: 40px;
+}
+
+.feature-item {
+    padding: 30px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.feature-item span {
+    font-size: 32px;
+    display: block;
+    margin-bottom: 14px;
+}
+
+.feature-item h3 {
+    margin-bottom: 12px;
+}
+
+.feature-item p {
+    color: rgba(255,255,255,0.72);
+}
+
+.footer {
+    padding: 40px 8%;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    text-align: center;
+    color: rgba(255,255,255,0.5);
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .section h2 {
+        font-size: 32px;
+    }
+
+    .desc,
+    .section-text {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
