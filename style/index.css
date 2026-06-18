@@ -6,7 +6,7 @@
 
 body {
     font-family: "Segoe UI", "PingFang SC", sans-serif;
-    background: #070b14;
+    background: #10192d;
     color: #ffffff;
     line-height: 1.7;
     overflow-x: hidden;
@@ -37,8 +37,9 @@ a {
     top: 0;
     z-index: 999;
     backdrop-filter: blur(14px);
-    background: rgba(7, 11, 20, 0.65);
+    background: rgba(12, 17, 33, 0.65);
     border-bottom: 1px solid rgba(255,255,255,0.05);
+    transition: background 0.25s ease, border-color 0.25s ease;
 }
 
 .logo {
@@ -126,6 +127,11 @@ a {
 
 .secondary:hover {
     border-color: #4da3ff;
+}
+
+.navbar.scrolled {
+    background: rgba(29, 38, 64, 0.65);
+    border-bottom: 1px solid rgba(77,163,255,0.15);
 }
 
 .hero-glow {

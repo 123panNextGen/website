@@ -20,11 +20,9 @@ const navbar = document.querySelector(".navbar");
 
 window.addEventListener("scroll", () => {
     if (window.scrollY > 50) {
-        navbar.style.background = "rgba(7, 11, 20, 0.88)";
-        navbar.style.borderBottom = "1px solid rgba(77,163,255,0.15)";
+        navbar.classList.add("scrolled");
     } else {
-        navbar.style.background = "rgba(7, 11, 20, 0.65)";
-        navbar.style.borderBottom = "1px solid rgba(255,255,255,0.05)";
+        navbar.classList.remove("scrolled");
     }
 });
 
