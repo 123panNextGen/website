@@ -16,7 +16,7 @@
     </div>
 
     <div class="footer-bottom">
-      本站所有代码以 CC BY 4.0 许可发布 · 由开源社区用 ❤️ 构建
+      本站所有内容以 CC BY 4.0 许可发布 · 由开源社区用 ❤️ 构建
     </div>
   </footer>
 </template>
