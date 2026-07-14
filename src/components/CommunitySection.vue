@@ -1,3 +1,17 @@
+<script setup lang="ts">
+interface CommunityLink {
+  label: string
+  icon: string
+  url: string
+  primary?: boolean
+}
+
+const links: CommunityLink[] = [
+  { label: '加入社区', icon: '💬', url: 'https://github.com/123panNextGen', primary: true },
+  { label: 'Star 我们', icon: '⭐', url: 'https://github.com/123panNextGen' },
+]
+</script>
+
 <template>
   <section id="community" class="section">
     <div class="section-header reveal">
@@ -16,13 +30,38 @@
       </p>
 
       <div class="community-links">
-        <a href="https://github.com/123panNextGen" target="_blank" class="btn btn-primary">
-          <span>💬</span> 加入社区
-        </a>
-        <a href="https://github.com/123panNextGen" target="_blank" class="btn btn-secondary">
-          <span>⭐</span> Star 我们
+        <a
+          v-for="link in links"
+          :key="link.label"
+          :href="link.url"
+          target="_blank"
+          :class="['btn', link.primary ? 'btn-primary' : 'btn-secondary']"
+        >
+          <span>{{ link.icon }}</span> {{ link.label }}
         </a>
       </div>
     </div>
   </section>
 </template>
+
+<style scoped>
+.community-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.community-content p {
+  font-size: 18px;
+  color: var(--text-secondary);
+  line-height: 1.9;
+  margin-bottom: 32px;
+}
+
+.community-links {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+</style>

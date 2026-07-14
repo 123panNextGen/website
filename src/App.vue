@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 import NavBar from './components/NavBar.vue'
 import HeroSection from './components/HeroSection.vue'
 import AboutSection from './components/AboutSection.vue'
@@ -8,8 +8,10 @@ import FeaturesSection from './components/FeaturesSection.vue'
 import CommunitySection from './components/CommunitySection.vue'
 import FooterSection from './components/FooterSection.vue'
 
+let observer: IntersectionObserver | null = null
+
 onMounted(() => {
-  const observer = new IntersectionObserver(
+  observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -21,8 +23,12 @@ onMounted(() => {
   )
 
   document.querySelectorAll('.reveal').forEach((el) => {
-    observer.observe(el)
+    observer!.observe(el)
   })
+})
+
+onUnmounted(() => {
+  observer?.disconnect()
 })
 </script>
 
@@ -34,10 +40,12 @@ onMounted(() => {
   <div class="bg-orb bg-orb--bottom"></div>
 
   <NavBar />
-  <HeroSection />
-  <AboutSection />
-  <ProjectsSection />
-  <FeaturesSection />
-  <CommunitySection />
+  <main>
+    <HeroSection />
+    <AboutSection />
+    <ProjectsSection />
+    <FeaturesSection />
+    <CommunitySection />
+  </main>
   <FooterSection />
 </template>
