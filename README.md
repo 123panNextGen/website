@@ -20,7 +20,7 @@ npm run preview  # 预览生产构建
 ### 内容部分
 本仓库中的**内容部分**（包括但不限于）：
 
-- `index.html` 及 `src/components` 下各组件模板中的文本内容
+- `index.html` 及 `src/components` 下各组件模板中`h1`、`h2`、`p`、`meta`、`title`等标签内的内容
 - `favicon.ico`
 - `sitemap.xml`
 

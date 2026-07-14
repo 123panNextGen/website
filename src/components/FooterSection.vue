@@ -6,7 +6,7 @@ interface FooterLink {
 
 const footerLinks: FooterLink[] = [
   { label: 'GitHub', url: 'https://github.com/123panNextGen' },
-  { label: 'CC BY 4.0', url: 'https://creativecommons.org/licenses/by/4.0/' },
+  { label: 'CC BY 4.0 协议', url: 'https://creativecommons.org/licenses/by/4.0/' },
   { label: '网站源码', url: 'https://github.com/123panNextGen/website' },
 ]
 

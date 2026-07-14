@@ -1,3 +1,0 @@
-User-agent: *
-Disallow: 
-Sitemap: https://www.123panng.top/sitemap.xml
